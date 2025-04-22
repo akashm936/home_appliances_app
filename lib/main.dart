@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+
+import 'home_screen.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -37,153 +40,8 @@ class _MyHomePageState extends State<MyHomePage> {
           style: TextStyle(fontSize: 24, fontWeight: FontWeight.w500),
         ),
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                InkWell(
-                  onTap: (){
-                    print("User Clicked on Fan");
-                  },
-                  child: Container(
-                    padding: EdgeInsets.all(11),
-                    width: 150,
-                    height: 150,
-
-                    decoration: BoxDecoration(
-                      color: Colors.blue,
-                      borderRadius: BorderRadius.circular(20),
-                      // border: Border.all(width: 1,color: Colors.blue,)
-                    ),
-                    child: Column(
-                      children: [
-                        Image.asset(
-                          'assets/images/ceiling.png',
-                          width: 100,
-                          height: 100,
-                        ),
-                        Text(
-                          'Fan',
-                          style: TextStyle(
-                            fontSize: 18,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-                InkWell(
-                  onTap: (){
-                    print('User Clicked on Air Conditioner');
-                  },
-                  child: Container(
-                    padding: EdgeInsets.all(11),
-                    width: 150,
-                    height: 150,
-
-                    decoration: BoxDecoration(
-                      color: Colors.blue,
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                    child: Column(
-                      children: [
-                        Image.asset(
-                          'assets/images/air-conditioner.png',
-                          width: 100,
-                          height: 100,
-                        ),
-                        Text(
-                          'AC',
-                          style: TextStyle(
-                            fontSize: 18,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ],
-            ),
-            Container(height: 30,),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                InkWell(
-                  onTap: (){
-                    print('User Clicked On Monitor');
-                  },
-                  child: Container(
-                    padding: EdgeInsets.all(11),
-                    width: 150,
-                    height: 150,
-
-                    decoration: BoxDecoration(
-                      color: Colors.blue,
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                    child: Column(
-                      children: [
-                        Image.asset(
-                          'assets/images/monitor.png',
-                          width: 100,
-                          height: 100,
-                        ),
-                        Text(
-                          'TV',
-                          style: TextStyle(
-                            fontSize: 18,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-                InkWell(
-                  onTap: (){
-                    print('User Clicked on Light');
-                  },
-                  child: Container(
-                    padding: EdgeInsets.all(11),
-                    width: 150,
-                    height: 150,
-
-                    decoration: BoxDecoration(
-                      color: Colors.blue,
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                    child: Column(
-                      children: [
-                        Image.asset(
-                          'assets/images/lightbulb.png',
-                          width: 100,
-                          height: 100,
-                        ),
-                        Text(
-                          'Light',
-                          style: TextStyle(
-                            fontSize: 18,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          ],
-        ),
-      ),
-
+      body: HomeScreen(),
     );
-    
   }
 }
+
