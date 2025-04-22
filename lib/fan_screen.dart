@@ -10,7 +10,20 @@ class FanScreen extends StatelessWidget{
       ),
       body: Column(
         children: [
-          Text("Hello", style: TextStyle(fontSize: 24, fontWeight: FontWeight.w500))
+          Container(
+            width: double.infinity,
+            height: 200,
+            color: Colors.lightGreen,
+            child: Column(
+              children: [
+                Row(
+                  children: [
+                    Text("Living Room Fan",)
+                  ],
+                )
+              ],
+            ),
+          )
         ],
       ),
     );
