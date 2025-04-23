@@ -49,7 +49,7 @@ class _AcScreenState extends State<AcScreen> {
                             onChanged: (value){
                               setState(() {
                                 isSwitch4 = value;
-                                isSwitch4!=true ? print("Switch is off"): print("Switch is on");
+                                isSwitch4!=true ? print(" AC Switch is off"): print("AC Switch is on");
                               });
                             })
                       ],
