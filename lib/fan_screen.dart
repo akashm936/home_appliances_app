@@ -10,7 +10,9 @@ class FanScreen extends StatefulWidget{
 
 class _FanScreenState extends State<FanScreen> {
   double _value = 1;
-  bool isSwitch = false;
+  bool isSwitch1 = false;
+  bool isSwitch2 = false;
+  bool isSwitch3 = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -42,12 +44,12 @@ class _FanScreenState extends State<FanScreen> {
                       children: [
                         Text("Living Room Fan",style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
                         Switch(
-                          value: isSwitch,
+                          value: isSwitch1,
                             activeColor: Colors.orange,
                             onChanged: (value){
                           setState(() {
-                            isSwitch = value;
-                            isSwitch!=true ? print("Switch is off"): print("Switch is on");
+                            isSwitch1 = value;
+                            isSwitch1!=true ? print("Switch is off"): print("Switch is on");
                             });
                         })
                       ],
@@ -65,6 +67,116 @@ class _FanScreenState extends State<FanScreen> {
                       activeColor: Colors.orange,
                       label: _value.round().toString(),
                       value: _value, onChanged: (value){
+                      _value = value;
+                      setState(() {
+
+                      });
+
+                    }),
+                  )
+                ],
+              ),
+            ),
+            SizedBox(height: 18,),
+            Container(
+              width: double.infinity,
+              height: 200,
+              decoration: BoxDecoration(
+                // color: Colors.lightGreenAccent,
+                  borderRadius: BorderRadius.circular(20),
+                  border: Border.all(
+                    color: Colors.orange,
+                    width: 2,
+                  )
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(left: 10.0, right: 10.0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text("Bed Room 1 Fan",style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
+                        Switch(
+                            value: isSwitch2,
+                            activeColor: Colors.orange,
+                            onChanged: (value){
+                              setState(() {
+                                isSwitch2 = value;
+                                isSwitch2!=true ? print("Switch is off"): print("Switch is on");
+                              });
+                            })
+                      ],
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 10.0),
+                    child: Text("Speed Controller", style: TextStyle(fontSize: 18),),
+                  ),
+                  Expanded(
+                    child: Slider(
+                        min: 0,
+                        max: 5,
+                        divisions: 5,
+                        activeColor: Colors.orange,
+                        label: _value.round().toString(),
+                        value: _value, onChanged: (value){
+                      _value = value;
+                      setState(() {
+
+                      });
+
+                    }),
+                  )
+                ],
+              ),
+            ),
+            SizedBox(height: 18,),
+            Container(
+              width: double.infinity,
+              height: 200,
+              decoration: BoxDecoration(
+                // color: Colors.lightGreenAccent,
+                  borderRadius: BorderRadius.circular(20),
+                  border: Border.all(
+                    color: Colors.orange,
+                    width: 2,
+                  )
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(left: 10.0, right: 10.0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text("Bed Room 2 Fan",style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
+                        Switch(
+                            value: isSwitch3,
+                            activeColor: Colors.orange,
+                            onChanged: (value){
+                              setState(() {
+                                isSwitch3 = value;
+                                isSwitch3!=true ? print("Switch is off"): print("Switch is on");
+                              });
+                            })
+                      ],
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 10.0),
+                    child: Text("Speed Controller", style: TextStyle(fontSize: 18),),
+                  ),
+                  Expanded(
+                    child: Slider(
+                        min: 0,
+                        max: 5,
+                        divisions: 5,
+                        activeColor: Colors.orange,
+                        label: _value.round().toString(),
+                        value: _value, onChanged: (value){
                       _value = value;
                       setState(() {
 
