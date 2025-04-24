@@ -42,8 +42,8 @@ class HomeScreen extends StatelessWidget {
                     children: [
                       Image.asset(
                         'assets/images/ceiling.png',
-                        width: 100,
-                        height: 100,
+                        width: 90,
+                        height: 90,
                       ),
                       Text(
                         'Fan',
@@ -77,8 +77,8 @@ class HomeScreen extends StatelessWidget {
                     children: [
                       Image.asset(
                         'assets/images/air-conditioner.png',
-                        width: 100,
-                        height: 100,
+                        width: 90,
+                        height: 90,
                       ),
                       Text(
                         'AC',
@@ -118,8 +118,8 @@ class HomeScreen extends StatelessWidget {
                     children: [
                       Image.asset(
                         'assets/images/monitor.png',
-                        width: 100,
-                        height: 100,
+                        width: 90,
+                        height: 90,
                       ),
                       Text(
                         'TV',
@@ -153,8 +153,8 @@ class HomeScreen extends StatelessWidget {
                     children: [
                       Image.asset(
                         'assets/images/lightbulb.png',
-                        width: 100,
-                        height: 100,
+                        width: 90,
+                        height: 90,
                       ),
                       Text(
                         'Light',
