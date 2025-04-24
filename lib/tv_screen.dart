@@ -14,6 +14,7 @@ class _TvScreenState extends State<TvScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: ThemeData().appBarTheme.backgroundColor,
         title: Text("TV Controller ", style: TextStyle(fontSize: 24, fontWeight: FontWeight.w500),),
       ),
       body: Padding(
@@ -57,8 +58,8 @@ class _TvScreenState extends State<TvScreen> {
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
                         Container(
-                          width: 100,
-                          height: 180,
+                          width: 70,
+                          height: 150,
                           decoration: BoxDecoration(
                             color: Colors.grey,
                             borderRadius: BorderRadius.circular(50),
@@ -72,16 +73,16 @@ class _TvScreenState extends State<TvScreen> {
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
-                                Icon(Icons.add,size: 40,color: Colors.orange,),
-                                Text('Vol',style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
-                                Icon(Icons.remove,size: 40,color: Colors.orange,)
+                                Icon(Icons.add,size: 30,color: Colors.orange,),
+                                Text('Vol',style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),),
+                                Icon(Icons.remove,size: 30,color: Colors.orange,)
                               ],
                             ),
                           ),
                         ),
                         Container(
-                          width: 100,
-                          height: 180,
+                          width: 70,
+                          height: 150,
                           decoration: BoxDecoration(
                               color: Colors.grey,
                               borderRadius: BorderRadius.circular(50),
@@ -95,9 +96,9 @@ class _TvScreenState extends State<TvScreen> {
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
-                                Icon(Icons.add,size: 40,color: Colors.orange,),
-                                Text('Chl',style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
-                                Icon(Icons.remove,size: 40,color: Colors.orange,)
+                                Icon(Icons.add,size: 30,color: Colors.orange,),
+                                Text('Chl',style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),),
+                                Icon(Icons.remove,size: 30,color: Colors.orange,)
                               ],
                             ),
                           ),

@@ -17,6 +17,7 @@ class _AcScreenState extends State<AcScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: ThemeData().appBarTheme.backgroundColor,
         title: Text("AC Controller",style: TextStyle(fontSize: 24, fontWeight: FontWeight.w500)),
       ),
       body: Padding(

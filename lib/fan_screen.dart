@@ -9,7 +9,9 @@ class FanScreen extends StatefulWidget{
 }
 
 class _FanScreenState extends State<FanScreen> {
-  double _value = 1;
+  double _value1 = 1;
+  double _value2 = 2;
+  double _value3 = 1;
   bool isSwitch1 = false;
   bool isSwitch2 = false;
   bool isSwitch3 = false;
@@ -17,6 +19,7 @@ class _FanScreenState extends State<FanScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: ThemeData().appBarTheme.backgroundColor,
         title: Text("Fan",style: TextStyle(fontSize: 24, fontWeight: FontWeight.w500),),
       ),
       body: Padding(
@@ -50,6 +53,7 @@ class _FanScreenState extends State<FanScreen> {
                           setState(() {
                             isSwitch1 = value;
                             isSwitch1!=true ? print("Switch is off"): print("Switch is on");
+
                             });
                         })
                       ],
@@ -65,9 +69,9 @@ class _FanScreenState extends State<FanScreen> {
                       max: 5,
                       divisions: 5,
                       activeColor: Colors.orange,
-                      label: _value.round().toString(),
-                      value: _value, onChanged: (value){
-                      _value = value;
+                      label: _value1.round().toString(),
+                      value: _value1, onChanged: (value){
+                      _value1 = value;
                       setState(() {
 
                       });
@@ -77,7 +81,7 @@ class _FanScreenState extends State<FanScreen> {
                 ],
               ),
             ),
-            SizedBox(height: 18,),
+            SizedBox(height: 10,),
             Container(
               width: double.infinity,
               height: 200,
@@ -120,9 +124,9 @@ class _FanScreenState extends State<FanScreen> {
                         max: 5,
                         divisions: 5,
                         activeColor: Colors.orange,
-                        label: _value.round().toString(),
-                        value: _value, onChanged: (value){
-                      _value = value;
+                        label: _value2.round().toString(),
+                        value: _value2, onChanged: (value){
+                      _value2 = value;
                       setState(() {
 
                       });
@@ -132,7 +136,7 @@ class _FanScreenState extends State<FanScreen> {
                 ],
               ),
             ),
-            SizedBox(height: 18,),
+            SizedBox(height: 10,),
             Container(
               width: double.infinity,
               height: 200,
@@ -175,9 +179,9 @@ class _FanScreenState extends State<FanScreen> {
                         max: 5,
                         divisions: 5,
                         activeColor: Colors.orange,
-                        label: _value.round().toString(),
-                        value: _value, onChanged: (value){
-                      _value = value;
+                        label: _value3.round().toString(),
+                        value: _value3, onChanged: (value){
+                      _value3 = value;
                       setState(() {
 
                       });

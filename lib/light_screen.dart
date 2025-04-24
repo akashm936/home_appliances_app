@@ -23,6 +23,7 @@ class _LightScreenState extends State<LightScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: ThemeData().appBarTheme.backgroundColor,
         title: Text(
           "Light Controller",
           style: TextStyle(fontSize: 24, fontWeight: FontWeight.w500),
@@ -34,7 +35,7 @@ class _LightScreenState extends State<LightScreen> {
           children: [
             Container(
               width: double.infinity,
-              height: 420,
+              height: 350,
               decoration: BoxDecoration(
                 // color: Colors.lightGreenAccent,
                 borderRadius: BorderRadius.circular(20),
@@ -49,7 +50,7 @@ class _LightScreenState extends State<LightScreen> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
-                          "Living Room Fan",
+                          "Living Room Light",
                           style: TextStyle(
                             fontSize: 20,
                             fontWeight: FontWeight.bold,
@@ -73,7 +74,7 @@ class _LightScreenState extends State<LightScreen> {
                   Padding(
                     padding: const EdgeInsets.only(left: 10.0),
                     child: Text(
-                      "Speed Controller",
+                      "Control Brightness",
                       style: TextStyle(fontSize: 18),
                     ),
                   ),
@@ -100,15 +101,24 @@ class _LightScreenState extends State<LightScreen> {
                     ),
                   ),
                   Expanded(
-                    flex: 1,
+                    flex: 2,
                     child: Padding(
                       padding: const EdgeInsets.all(10),
                       child: GridView.builder(
                         scrollDirection: Axis.vertical,
                         itemBuilder: (context, index) {
-                          return CircleAvatar(
-                            radius: 20,
-                            backgroundColor: arrColors[index],
+                          return InkWell(
+                            onTap: (){
+                              print('${arrColors[index].toString()} Color is applied');
+                            },
+                            child: Container(
+                              width: 5,
+                              height: 5,
+                              decoration: BoxDecoration(
+                                color: arrColors[index],
+                                borderRadius: BorderRadius.circular(30)
+                              ),
+                            ),
                           );
                         },
                         itemCount: arrColors.length,
