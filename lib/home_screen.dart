@@ -34,8 +34,9 @@ class HomeScreen extends StatelessWidget {
                   height: 150,
 
                   decoration: BoxDecoration(
-                    color: Colors.blue,
+                    color: Colors.lightBlue,
                     borderRadius: BorderRadius.circular(20),
+
                     // border: Border.all(width: 1,color: Colors.blue,)
                   ),
                   child: Column(
@@ -70,7 +71,7 @@ class HomeScreen extends StatelessWidget {
                   height: 150,
 
                   decoration: BoxDecoration(
-                    color: Colors.blue,
+                    color: Colors.lightBlue,
                     borderRadius: BorderRadius.circular(20),
                   ),
                   child: Column(
@@ -111,7 +112,7 @@ class HomeScreen extends StatelessWidget {
                   height: 150,
 
                   decoration: BoxDecoration(
-                    color: Colors.blue,
+                    color: Colors.lightBlue,
                     borderRadius: BorderRadius.circular(20),
                   ),
                   child: Column(
@@ -146,7 +147,7 @@ class HomeScreen extends StatelessWidget {
                   height: 150,
 
                   decoration: BoxDecoration(
-                    color: Colors.blue,
+                    color: Colors.lightBlue,
                     borderRadius: BorderRadius.circular(20),
                   ),
                   child: Column(
