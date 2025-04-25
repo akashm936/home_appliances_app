@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:home_appliances_app/tv_screen.dart';
-
 import 'ac_screen.dart';
 import 'fan_screen.dart';
 import 'light_screen.dart';
@@ -145,7 +144,6 @@ class HomeScreen extends StatelessWidget {
                   padding: EdgeInsets.all(11),
                   width: 150,
                   height: 150,
-
                   decoration: BoxDecoration(
                     color: Colors.lightBlue,
                     borderRadius: BorderRadius.circular(20),
